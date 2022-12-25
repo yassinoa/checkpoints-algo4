@@ -1,0 +1,18 @@
+ALGORITHM sort
+VAR
+    tab :ARRAY_OF INTEGER[100];
+    i,j,c: INTEGER
+BEGIN
+
+  FOR i FROM 0 TO tab.length-1 DO
+
+    FOR j FROM 0 TO tab.length-2 DO
+      IF (tab[j] > tab[j + 1]) THEN
+        c = tab[j]
+        tab[j] = tab[j + 1]
+        tab[j + 1] = c
+      END_IF
+    END_FOR
+  END_FOR
+
+END
